@@ -1,0 +1,26 @@
+<!-- 7. Write a JavaScript function to remove HTML/XML tags from string. -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove HTML/XML from string</title>
+</head>
+<body>
+    <script>
+        function strip_html_tags(str) {
+            if ((str===null) || (str===''))
+                return false;
+            else
+                str = str.toString();
+                return str.replace(/<[^>]*>/g, '');
+        }
+
+        console.log(strip_html_tags('JS Exercise'));
+    </script>
+</body>
+</html>
